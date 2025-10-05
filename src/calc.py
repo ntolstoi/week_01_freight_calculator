@@ -1,5 +1,5 @@
 print("Emergency Freight Calculator")
-
+## Input: length, width, height in cm, actual weight in kg and checking for negative and non-numeric input
 while True:
     try:
         length = float(input("Please enter length of the package in cm: "))
@@ -39,9 +39,9 @@ while True:
         break
     except ValueError:
         print("Sorry, input must be numeric, try again")
-
+#calculate dimensional weight
 dim_weight = (length * width * height) / 6000
-
+# Output: dimensional weight in kg, chargeable weight in kg
 print("Emergency Freight Calculator input values")
 print(f"Length of package: {length} cm")
 print(f"Width of package: {width} cm")
@@ -50,3 +50,7 @@ print(f"Actual Weight: {weight} kg")
 print(f"Chargeable Weight: {dim_weight:.2f} kg")
 print("==============================================")
 print("Calculation results:")
+print(f"- Actual Weight: {weight} kg")
+print(f"- Dimensional Weight: {dim_weight:.2f} kg")
+print(f"- Chargeable Weight: {dim_weight:.2f} kg (dimensional weight applies)")
+print(f"\nResult: Bill customer for {dim_weight:.2f} kg")
